@@ -1,0 +1,191 @@
+/* =========================================================
+   KONTAKT MENÜÜ (hamburger + parempoolne külgkast)
+   Fail: kontakt.css
+   Eesmärk: hoida menüü stiilid eraldi indexstyle.css-st
+   ========================================================= */
+
+/* ---------------------------
+   HAMBURGER NUPP (3 joont)
+   --------------------------- */
+.menuu-nupp{
+  position: fixed;                 /* jääb ekraanile paigale ka scrollides */
+  top: 14px;                       /* kaugus ülevalt */
+  right: 16px;                     /* kaugus paremalt */
+  width: 44px;
+  height: 44px;
+  border: 0;                       /* eemaldab brauseri kuti/ringi */
+  border-radius: 999px;            /* ümmargune “pill” nupp */
+  background: rgba(255,255,255,0.70); /* läbipaistev valge */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* kerge vari */
+  display: flex;                   /* jooned keskele paigutamiseks */
+  flex-direction: column;          /* jooned üksteise alla */
+  justify-content: center;         /* vertikaalne tsentreerimine */
+  gap: 5px;                        /* joonte vahe */
+  padding: 0 12px;                 /* vasak/parem sisemine vahe */
+  cursor: pointer;                 /* “käsi”, et oleks selge: klikitav */
+  z-index: 2000;                   /* peab olema overlay ja sisu peal */
+}
+
+/* Hamburgeri kolm joont */
+.menuu-nupp__joon{
+  display: block;
+  height: 2px;                     /* joone paksus */
+  width: 100%;                     /* joone pikkus nuppu sees */
+  background: #1f2a33;             /* tume värv */
+  border-radius: 2px;              /* pehmed otsad */
+}
+
+/* ---------------------------
+   TAUST / OVERLAY
+   (tume kiht, mis katab lehe)
+   --------------------------- */
+.menuu-taust{
+  position: fixed;
+  inset: 0;                        /* top/right/bottom/left = 0 */
+  background: rgba(0,0,0,0.25);    /* läbipaistev must */
+  opacity: 0;                      /* vaikimisi nähtamatu */
+  pointer-events: none;            /* vaikimisi ei kliki läbi */
+  transition: opacity 180ms ease;  /* sujuv fade */
+  z-index: 1990;                   /* peab olema lehe peal, aga menüü all */
+}
+
+/* Kui JS lisab klassi "avatud", siis overlay muutub nähtavaks ja klikitavaks */
+.menuu-taust.avatud{
+  opacity: 1;
+  pointer-events: auto;            /* nüüd saab overlay peale klikkida (ja sulgeda) */
+}
+
+/* ---------------------------
+   KÜLGMENÜÜ KAST (paremalt)
+   --------------------------- */
+.menuu-kast{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;                    /* terve ekraani kõrgus */
+  width: min(520px, 92vw);         /* max 520px, mobiilis max 92% ekraanist */
+  background: #ffffff;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.18); /* vari vasakus servas */
+  transform: translateX(100%);     /* algselt “ekraanist väljas” paremal */
+  transition: transform 220ms ease;/* sujuv slaid */
+  z-index: 2001;                   /* overlay ja nupu peal */
+  display: flex;
+  flex-direction: column;          /* ülemine riba + sisu üksteise all */
+}
+
+/* Kui JS lisab "avatud", tuleb kast ekraanile */
+.menuu-kast.avatud{
+  transform: translateX(0);
+}
+
+/* Ülemine riba: pealkiri + X nupp */
+.menuu-kast__yl{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #f4fbff;             /* hele sinakas */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* “Kontakt” pealkiri */
+.menuu-kast__pealkiri{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* X sulgemise nupp */
+.menuu-kast__sulge{
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Sisu osa: scrollib, kui teksti on palju */
+.menuu-kast__sisu{
+  padding: 16px;
+  overflow: auto;                  /* kui sisu > ekraan, lubab menüü sees scrolli */
+}
+
+/* ---------------------------
+   SISU TEKSTID
+   --------------------------- */
+.menuu-tekst{
+  opacity: 0.85;                   /* natuke “pehmem” kui pealkiri */
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.menuu-email{
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+/* ---------------------------
+   NUPUD
+   --------------------------- */
+
+/* Kuna on 1 nupp, paneme selle keskele */
+.menuu-nupud{
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* “pill” stiiliga nupp/linginupp */
+.menuu-btn{
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 18px;
+  background: #eef3f7;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+  cursor: pointer;
+  text-decoration: none;           /* link ei ole allajoonitud */
+  color: inherit;                  /* võtab ümbrise teksti värvi */
+  display: inline-block;
+  min-width: 240px;                /* et oleks ilus “lai pill” */
+  text-align: center;
+  font-size: 16px;
+  
+}
+
+/* “Põhinupp” */
+.menuu-btn.primary{
+  background: #e9edf0;
+
+}
+
+
+
+
+/* ---------------------------
+   JAGAJAD / LOETELU
+   --------------------------- */
+.menuu-joon{
+  border: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.10);
+  margin: 18px 0;
+}
+
+.menuu-alapealkiri{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.menuu-loetelu{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+/* ---------------------------
+   LEHE SCROLLI LUKUSTAMINE
+   Kui menüü on avatud, JS lisab body-le klassi "menuu-avatud"
+   --------------------------- */
+body.menuu-avatud{
+  overflow: hidden;                /* taust ei liigu menüü all */
+}

@@ -1,0 +1,184 @@
+/* Общие стили — работают на всех страницах  
+   Üldised stiilid — töötavad kõigil lehtedel */
+body {
+    font-family: Arial, sans-serif; /* Шрифт текста / Lehe font */
+}
+
+/* Фон главной страницы  
+   Pealehe taust */
+.home_page {
+    background-color: #f0f7ff;
+}
+
+/* Размещение кнопок на главной  
+   Nuppude asetus pealehel */
+.home_page main {
+    margin-top: 80px;      /* расстояние сверху / vahe ülaosast */
+    display: flex;         /* гибкий контейнер / paindlik konteiner */
+    flex-direction: column;/* вертикальное расположение / vertikaalne paigutus */
+    align-items: center;     /* выравнивание слева / joondus vasakule */
+    gap: 20px;             /* расстояние между элементами / elementide vahe */
+    margin-right: 0px;     /* без смещения / nihketa */
+}
+
+/* Сброс стандартных отступов браузера. */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*  Кнопка Programmeerimine I  
+    Programmeerimine I nupp */
+.home_page .buttonProgaI {
+    display: block;             /* блочный элемент / plokk-element */
+    background-color: #d9d9d9;  /* серый фон / hall taust */
+    border: none;               /* без рамки / raamita */
+    border-radius: 15px;        /* круглые углы / ümarad nurgad */
+    padding: 15px 15px;         /* внутренний отступ / sisemine vahe */
+    font-size: 20px;            /* размер текста / teksti suurus */
+    text-align: left;           /* текст слева / tekst vasakul */
+    width: 900px;               /* ширина кнопки / nupu laius */
+    cursor: pointer;            /* указатель-рука / käe-kursor */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* тень / vari */
+    text-decoration: none;      /* без подчёркивания / ilma allajooneta */
+    color: black;               /* чёрный текст / must tekst */
+}
+
+/* Эффект наведения  
+   Hiirega peale minemise efekt */
+.home_page button.buttonProgaI:hover {
+    background-color: #c4c4c4; /* затемнение / tumedam toon */
+}
+
+/*  Кнопка Programmeerimine II  
+    Programmeerimine II nupp */
+.home_page .buttonProgaII {
+    display: block;
+    background-color: #d9d9d9;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 15px;
+    font-size: 20px;
+    text-align: left;
+    width: 900px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: black;
+}
+
+/* Эффект наведения  
+   Hiirega peale minemise efekt */
+.home_page button.buttonProgaII:hover {
+    background-color: #c4c4c4;
+}
+
+/* Новые овальные карточки-кнопки  
+   Uued ovaalsed kaardid-nupud */
+.home_page .home-card {
+    background: #e9edf0;        /* светлый фон / hele taust */
+    padding: 16px 28px;         /* внутренний отступ / sisemine vahe */
+    border-radius: 999px;       /* полностью круглая форма / väga ümar kuju */
+    font-size: 20px;            /* текст / teksti suurus */
+    font-weight: 500;           /* чуть жирный / poolpaks */
+    color: #1f2a33;             /* тёмный текст / tume tekst */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* тень / vari */
+    margin-bottom: 15px;        /* расстояние между кнопками / kaartide vahe */
+    cursor: pointer;            /* курсор-рука / käe-kursor */
+    user-select: none;          /* нельзя выделять текст / teksti ei saa valida */
+    width: 900px;               /* ширина / laius */
+    text-align: left;           /* текст слева / tekst vasakul */
+}
+
+/* Эффект наведения  
+   Hiirega peale minemise efekt */
+.home_page .home-card:hover {
+    filter: brightness(1.02);   /* чуть светлее / pisut heledam */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20); /* больше тень / suurem vari */
+}
+
+/* Табличка сверху с названием (главная страница)  
+   Ülemine ovaalne pealkiri (pealeht) */
+.home_page .title-pill {
+    position: absolute;         /* абсолютное позиционирование / absoluutne asetus */
+    left: 50%;                  /* по центру / keskele */
+    top: 20px;                  /* 20px сверху / 20px ülalt */
+    transform: translateX(-50%);/* точное центрирование / täpne keskjoondus */
+    background: #e9edf0;        /* светлый фон / hele taust */
+    padding: 12px 28px;         /* отступы / vahed */
+    border-radius: 999px;       /* круглая форма / ümar kuju */
+    font-size: 20px;
+    font-weight: 500;
+    color: #1f2a33;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;        /* не переносить строки / rida ei murdu */
+    display: inline-block;      /* делает элемент компактным / kompaktne element */
+}
+
+
+/* Ülemine sinine riba kõikidel lehtedel  
+   Верхняя синяя панель для всех страниц */
+.top-bar {
+    background: #86cfe8;        /* sinine taust / голубой фон */
+    height: 100px;              /* headeri kõrgus / высота шапки */
+    position: relative;         /* elementide paigutus sees / позволяет позиционировать внутренние элементы */
+    z-index: 10;                /* teistest kõrgemal / поверх других элементов */
+}
+
+/* Tagasi-nupp vasakul ülanurgas  
+   Кнопка «назад» в левом верхнем углу */
+.back-button {
+    position: absolute;         /* täpne asetus / точное позиционирование */
+    left: 16px;                 /* vasak vahe / отступ слева */
+    top: 18px;                  /* ülemine vahe / отступ сверху */
+    
+    width: 38px;                /* nupu laius / ширина кнопки */
+    height: 38px;               /* nupu kõrgus / высота кнопки */
+    
+    background: rgba(255,255,255,0.45); /* läbipaistev valge / полупрозрачный белый */
+    border-radius: 12px;        /* ümarad nurgad / скруглённые углы */
+    
+    display: flex;              /* sisu tsentreerimine / центрирование содержимого */
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 22px;            /* noole suurus / размер стрелки */
+    font-weight: 700;           /* paks tekst / жирность текста */
+    color: #0b2230;             /* tume tekst / тёмный текст */
+    
+    cursor: pointer;            /* hiirekursor käeks / курсор-рука */
+    user-select: none;          /* teksti ei saa valida / текст нельзя выделить */
+}
+
+/* Ovaalne pealkirja „pill“ keskel  
+   Овальная «таблетка» с названием в центре */
+.title-pill {
+    position: absolute;         /* täpne positsioon / точное позиционирование */
+    left: 50%;                  /* horisontaalne keskpunkt / центр по горизонтали */
+    top: 18px;                  /* ülemine vahe / отступ сверху */
+    transform: translateX(-50%);/* täpne tsentreerimine / точное выравнивание по центру */
+
+    background: #e9edf0;        /* hele taust / светлый фон */
+    padding: 12px 28px;         /* sisemised vahed / внутренние отступы */
+    border-radius: 999px;       /* väga ümar kuju / максимальное скругление */
+
+    font-size: 20px;            /* teksti suurus / размер текста */
+    font-weight: 500;           /* keskmine paksus / полужирный */
+    color: #1f2a33;             /* tume tekst / тёмный текст */
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* vari all / тень снизу */
+    white-space: nowrap;        /* rida ei murdu / строка не переносится */
+}
+
+
+/* UT logo in the top-left corner / TÜ logo vasakus ülanurgas */
+.ut-logo {
+    position: absolute;     /* фиксированное место / täpne positsioon */
+    left: 20px;             /* отступ слева / vasak vahe */
+    top: 20px;              /* отступ сверху / ülemine vahe */
+    height: 55px;           /* размер логотипа / logo kõrgus */
+    width: auto;            /* пропорции / proportsioonid */
+    z-index: 11;            /* поверх фона / taustast kõrgem */
+}
+

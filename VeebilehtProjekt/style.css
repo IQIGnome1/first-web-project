@@ -1,0 +1,180 @@
+/* Общие стили — работают на всех страницах */
+body {
+    text-shadow: 0 0 8px rgba(255,255,255,0.6);
+    font-family: Arial, sans-serif;
+}
+
+.all_pages{  
+
+    background-color: aliceblue;
+}
+
+
+.all_pages main{
+
+    margin-top: 80px;    
+    display: flex;         
+    flex-direction: column;
+    gap: 20px;    
+    align-items: center;          
+    margin-right: 0px;     
+
+}
+
+
+/* Сброс стандартных отступов браузера. */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.all_pages .all_buttons {
+    display: block;             /* блочный элемент / plokk-element */
+    background-color: #d9d9d9;  /* серый фон / hall taust */
+    border: none;               /* без рамки / raamita */
+    border-radius: 15px;        /* круглые углы / ümarad nurgad */
+    padding: 15px 15px;         /* внутренний отступ / sisemine vahe */
+    font-size: 20px;            /* размер текста / teksti suurus */
+    text-align: left;           /* текст слева / tekst vasakul */
+    width: 900px;               /* ширина кнопки / nupu laius */
+    cursor: pointer;            /* указатель-рука / käe-kursor */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* тень / vari */
+    text-decoration: none;      /* без подчёркивания / ilma allajooneta */
+    color: black;               /* чёрный текст / must tekst */
+}
+
+/* Эффект наведения  
+   Hiirega peale minemise efekt */
+.home_page button.all_buttons :hover {
+    background-color: #c4c4c4; /* затемнение / tumedam toon */
+}
+
+
+
+/* Новые овальные карточки-кнопки  
+   Uued ovaalsed kaardid-nupud */
+.all_pages .all_buttons  {
+    background: #e9edf0;        /* светлый фон / hele taust */
+    padding: 16px 28px;         /* внутренний отступ / sisemine vahe */
+    border-radius: 999px;       /* полностью круглая форма / väga ümar kuju */
+    font-size: 20px;            /* текст / teksti suurus */
+    font-weight: 500;           /* чуть жирный / poolpaks */
+    color: #1f2a33;             /* тёмный текст / tume tekst */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* тень / vari */
+    margin-bottom: 15px;        /* расстояние между кнопками / kaartide vahe */
+    cursor: pointer;            /* курсор-рука / käe-kursor */
+    user-select: none;          /* нельзя выделять текст / teksti ei saa valida */
+    width: 900px;               /* ширина / laius */
+    text-align: left;           /* текст слева / tekst vasakul */
+}
+
+/* Эффект наведения  
+   Hiirega peale minemise efekt */
+.all_pages .all_buttons:hover {
+    filter: brightness(1.02);   /* чуть светлее / pisut heledam */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20); /* больше тень / suurem vari */
+}
+
+/* Табличка сверху с названием (главная страница)  
+   Ülemine ovaalne pealkiri (pealeht) */
+.all_pages .title-pill {
+    position: absolute;         /* абсолютное позиционирование / absoluutne asetus */
+    left: 50%;                  /* по центру / keskele */
+    top: 20px;                  /* 20px сверху / 20px ülalt */
+    transform: translateX(-50%);/* точное центрирование / täpne keskjoondus */
+    background: #e9edf0;        /* светлый фон / hele taust */
+    padding: 12px 28px;         /* отступы / vahed */
+    border-radius: 999px;       /* круглая форма / ümar kuju */
+    font-size: 20px;
+    font-weight: 500;
+    color: #1f2a33;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;        /* не переносить строки / rida ei murdu */
+    display: inline-block;      /* делает элемент компактным / kompaktne element */
+}
+
+
+/* Ülemine sinine riba kõikidel lehtedel  
+   Верхняя синяя панель для всех страниц */
+.top-bar {
+    background: #86cfe8;        /* sinine taust / голубой фон */
+    height: 100px;              /* headeri kõrgus / высота шапки */
+    position: relative;         /* elementide paigutus sees / позволяет позиционировать внутренние элементы */
+    z-index: 10;                /* teistest kõrgemal / поверх других элементов */
+}
+
+/* Tagasi-nupp vasakul ülanurgas  
+   Кнопка «назад» в левом верхнем углу */
+.back-button {
+    position: absolute;         /* täpne asetus / точное позиционирование */
+    left: 16px;                 /* vasak vahe / отступ слева */
+    top: 18px;                  /* ülemine vahe / отступ сверху */
+    
+    width: 38px;                /* nupu laius / ширина кнопки */
+    height: 38px;               /* nupu kõrgus / высота кнопки */
+    
+    background: rgba(255,255,255,0.45); /* läbipaistev valge / полупрозрачный белый */
+    border-radius: 12px;        /* ümarad nurgad / скруглённые углы */
+    
+    display: flex;              /* sisu tsentreerimine / центрирование содержимого */
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 22px;            /* noole suurus / размер стрелки */
+    font-weight: 700;           /* paks tekst / жирность текста */
+    color: #0b2230;             /* tume tekst / тёмный текст */
+    
+    cursor: pointer;            /* hiirekursor käeks / курсор-рука */
+    user-select: none;          /* teksti ei saa valida / текст нельзя выделить */
+}
+
+/* Ovaalne pealkirja „pill“ keskel  
+   Овальная «таблетка» с названием в центре */
+.title-pill {
+    position: absolute;         /* täpne positsioon / точное позиционирование */
+    left: 50%;                  /* horisontaalne keskpunkt / центр по горизонтали */
+    top: 18px;                  /* ülemine vahe / отступ сверху */
+    transform: translateX(-50%);/* täpne tsentreerimine / точное выравнивание по центру */
+
+    background: #e9edf0;        /* hele taust / светлый фон */
+    padding: 12px 28px;         /* sisemised vahed / внутренние отступы */
+    border-radius: 999px;       /* väga ümar kuju / максимальное скругление */
+
+    font-size: 20px;            /* teksti suurus / размер текста */
+    font-weight: 500;           /* keskmine paksus / полужирный */
+    color: #1f2a33;             /* tume tekst / тёмный текст */
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* vari all / тень снизу */
+    white-space: nowrap;        /* rida ei murdu / строка не переносится */
+}
+
+
+.pill-card {
+    display: block;
+    background: #e9edf0;
+    padding: 14px 20px;               /* уменьшили высоту */
+    border-radius: 50px;              /* мягкая форма */
+    font-size: 18px;                  /* чуть меньше текст */
+    font-weight: 500;
+    color: #1f2a33;
+    width: 80%;
+    max-width: 300px;                 /* уменьшенная ширина */
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12); /* красивая мягкая тень */
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Контейнер: карточка + кнопка */
+.file-block {
+    width: 80%;
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+

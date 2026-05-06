@@ -1,0 +1,107 @@
+body{
+    margin:0;
+    font-family:  Arial, sans-serif;
+    background: #f0f7ff;
+    }
+
+.top-bar {
+    background: #86cfe8;
+    height: 100px;
+    position: relative;
+}
+
+.back-button {
+    position:absolute;
+    left:16px;
+    top:18px;
+
+    width:38px;
+    height:38px;
+    background: rgba(255,255,255,0.45);
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+    font-weight:700;
+    color:#0b2230;
+    cursor:pointer;
+    user-select:none;
+    }
+
+.title-pill {
+    position: absolute;         /* абсолютное позиционирование / absoluutne asetus */
+    left: 50%;                  /* по центру / keskele */
+    top: 20px;                  /* 20px сверху / 20px ülalt */
+    transform: translateX(-50%);/* точное центрирование / täpne keskjoondus */
+    background: #e9edf0;        /* светлый фон / hele taust */
+    padding: 12px 28px;         /* отступы / vahed */
+    border-radius: 999px;       /* круглая форма / ümar kuju */
+    font-size: 20px;
+    font-weight: 500;
+    color: #1f2a33;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;        /* не переносить строки / rida ei murdu */
+    display: inline-block;
+        }
+
+.material-view-main {
+    margin: 50px auto 40px auto;
+    max-width: 1000px;
+    padding: 0 16px;
+        }
+
+.material-header {
+    background:#e9edf0;
+    border-radius:999px;
+    padding:14px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    margin-bottom:20px;
+        }
+
+.material-title {
+    font-size:16px;
+    font-weight:500;
+    color:#1f2a33;
+        }
+
+.material-date {
+    font-size:14px;
+    color:#555;
+        }
+
+.open-file-btn {
+    display:inline-block;
+    margin: 20px;;
+    background:#e9edf0;
+    padding:10px 20px;
+    border-radius:999px;
+    text-decoration:none;
+    color:#1f2a33;
+    font-size:15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+
+        }
+
+.open-file-btn:hover {
+    filter:brightness(1.03);
+    box-shadow:0 4px 10px rgba(0,0,0,0.20);
+        }
+
+.pdf-frame-wrapper {
+    background:#e9edf0;
+    padding:10px;
+    border-radius:16px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+.pdf-frame {
+    width:100%;
+    height:600px;
+    border:none;
+        }

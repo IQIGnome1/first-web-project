@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <link rel="icon" type="image/png" href="arhiiv.png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./indexstyle.css">
+    <link rel="stylesheet" href="./kontakt.css">
+    <title>informatikaa Arhiiv</title>
+
+</head>
+
+<body class="home_page">
+
+    <!-- Верхний синий header -->
+    <div class="top-bar">
+        <img src="UT_website_logo_blue_est.svg" class="ut-logo" alt="UT Logo">
+        <div class="title-pill">Tudengi Arhiiv 📚</div>
+    </div>
+ 
+    <!-- Основной контент -->
+    <main class="page-content">
+
+
+
+        <div class="home-card" id="Andme">Andmebaasid 🗄️</div>
+        <div class="home-card" id="Anmdeturve">Andmeturve 🛡️</div>
+        <div class="home-card" id="Aara">Arvuti arhitektuur ja riistvara I 🖥️</div>
+        <div class="home-card" id="Programmeerimine_I">Programmeerimine I 💻</div>
+        <div class="home-card" id="Programmeerimine_II">Programmeerimine II 🧑‍💻</div>
+        <div class="home-card" id="Oop">OOP ⌨️</div>
+        
+    
+
+
+    </main>
+
+<!-- HAMBURGER NUPP (paremal üleval) -->
+<button id="menuuNupp" class="menuu-nupp" type="button" aria-label="Ava menüü" aria-expanded="false">
+  <span class="menuu-nupp__joon"></span>
+  <span class="menuu-nupp__joon"></span>
+  <span class="menuu-nupp__joon"></span>
+</button>
+
+<!-- TAUST (overlay) -->
+<div id="menuuTaust" class="menuu-taust" aria-hidden="true"></div>
+
+<!-- KÜLGMENÜÜ -->
+<aside id="menuuKast" class="menuu-kast" aria-hidden="true">
+  <div class="menuu-kast__yl">
+    <div class="menuu-kast__pealkiri">Kontakt</div>
+    <button id="menuuSulge" class="menuu-kast__sulge" type="button" aria-label="Sulge menüü">✕</button>
+  </div>
+
+  <div class="menuu-kast__sisu">
+    <div class="menuu-plokk">
+      <div class="menuu-tekst">
+        Kui soovid õppematerjale juurde lisada, kirjuta siia e-posti aadressile.
+      </div>
+
+      <div class="menuu-email">anderhinn@ut.ee</div>
+
+      <div class="menuu-nupud">
+        <a class="menuu-btn primary" target="_blank" rel="noopener"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=anderhinn@ut.ee&su=%C3%95ppematerjalide%20lisamine&body=Tere!%0A%0ASoovin%20lisada%20%C3%B5ppematerjale.%0A%0AKursus:%20...%0ATeema:%20...">
+          Kirjuta e-kiri
+        </a>
+      </div>
+
+      <hr class="menuu-joon">
+
+      <div class="menuu-alapealkiri">Mida on hea kirja sisse panna?</div>
+      <ul class="menuu-loetelu">
+        <li>Kursuse nimi (nt Andmebaasid / Andmeturve / AAR)</li>
+        <li>Mis tüüpi fail on (loenguslaidid, harjutused, eksam, näidisvastused)</li>
+        <li>Fail(ide) manus või pilvelink (võiks olla PDF)</li>
+        <li>Lühike kirjeldus, mis teema kohta see on</li>
+      </ul>
+    </div>
+  </div>
+</aside>
+ <script src="script.js" defer></script>
+</body>
+</html>
